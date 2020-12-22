@@ -1,0 +1,99 @@
+public class book {
+	protected int id []=new int [10];
+	protected String name[]=new String[10];
+	protected  String author []=new String[10];
+	protected int pages[]=new int [10];
+	protected int size;
+	void input()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("\t\t\tAdd Books:\t\t\t\n");
+		System.out.println("HOW MANY TIMES YOU WANTS TO ENTER BOOK:");
+		size=sc.nextInt();
+		for(int i=0;i<size;i++)
+		{
+		System.out.println("ENTER BOOK ID:");
+		id[i]=sc.nextInt();
+		sc.nextLine();
+		System.out.println("ENTER BOOK NAME:");
+		name[i]=sc.nextLine();
+		System.out.println("ENTER AUTHOR NAME:");
+		author[i]=sc.nextLine();
+		System.out.println("ENTER NUMBER OF PAGES:");
+		pages[i]=sc.nextInt();
+	}
+}
+	void displayBook()
+	{ 
+		for(int i=0;i<size;i++)
+		{
+			if(id[i]>0)
+			{
+			System.out.println("BOOK ID:"+id[i]);
+			System.out.println("BOOK NAME:"+name[i]);
+			System.out.println("AUTHOR NAME:"+author[i]);
+			System.out.println("PAGES:"+pages[i]);
+			}
+			else
+			{
+				System.out.println("NO BOOKS FOUND!");
+			}
+		}	
+	}
+	void searchBook()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER BOOK ID WANT TO SEARCH:");
+		int sb=sc.nextInt();
+		for(int i=0;i<size;i++)
+		{
+			if(sb==id[i])
+			{
+				System.out.println("BOOK FOUND SUCCESSFULLY!");
+			}
+			else
+			{
+				System.out.println("BOOK NOT FOUND SUCCESSFULLY!");
+			}
+		}
+	}
+	void updateBook()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER BOOK ID WANT TO SEARCH:");
+		int ub=sc.nextInt();
+		for(int i=0;i<size;i++)
+		{
+			if(ub==id[i])
+			{
+				System.out.println("ENTER BOOK ID:");
+				id[i]=sc.nextInt();
+				sc.nextLine();
+				System.out.println("ENTER BOOK NAME:");
+				name[i]=sc.nextLine();
+				System.out.println("ENTER AUTHOR NAME:");
+				author[i]=sc.nextLine();
+				System.out.println("ENTER NUMBER OF PAGES:");
+				pages[i]=sc.nextInt();
+			}
+		}
+	}
+	void deleteBook()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER BOOK ID WANT TO DELETE:");
+		int db=sc.nextInt();
+		for(int i=0;i<size;i++)
+		{
+			if(db==id[i])
+			{
+				id[i]=-1;
+				System.out.println("BOOK DELETED SUCCESSFULLY!");
+			}
+			else
+			{
+				System.out.println("BOOK NOT DELETED SUCCESSFULLY!");
+			}
+		}
+	}
+	}

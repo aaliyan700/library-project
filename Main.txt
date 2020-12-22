@@ -1,0 +1,71 @@
+public class Main {
+	public static void main(String list[])
+	{
+		Scanner sc=new Scanner(System.in);
+		book b=new book();
+		student s=new student();
+		int ch,choice;
+		do
+		{
+			System.out.println("\t\t-----------------------------------------------------\t\t");
+			System.out.println("\t\t----------LIBARARY MANAGMENT SYSTEM-------\t\t");
+			System.out.println("\t\t-----------------------------------------------------\t\t");
+		System.out.println("1.ADD BOOKS");
+		System.out.println("2.DISPLAY BOOKS");
+		System.out.println("3.SEARCH BOO:");
+		System.out.println("4.UPDATE BOOK:");
+		System.out.println("5.DELETE BOOK:");
+		System.out.println("6.ADD STUDENT");
+		System.out.println("7.DISPLAY STUDENT");
+		System.out.println("8.SEARCH STUDENT");
+		System.out.println("9.UPDATE STUDENT");
+		System.out.println("10.DELETE STUDENT");
+		System.out.println("11.EXIT");
+		System.out.println("ENTER YOUR CHOICE:");
+		ch=sc.nextInt();
+switch(ch)
+{
+case 1:
+	b.input();
+	break;
+case 2:
+	b.displayBook();
+	break;
+case 3:
+	b.searchBook();
+	break;
+case 4:
+	b.updateBook();
+	break;
+case 5:
+	b.deleteBook();
+	break;
+case 6:
+	s.add();
+	break;
+case 7:
+	s.displayStudent();
+	break;
+case 8:
+	s.searchStudent();
+	break;
+case 9:
+	s.updateStudent();
+	break;
+case 10:
+	s.deleteStudent();
+	break;
+case 11:
+	System.out.println("EXIT");
+	break;
+	default:
+		System.out.println("INVALID CHOICE");
+}
+System.out.println("DO YOU WANTS TO CONTINUE ?0");
+choice=sc.nextInt();
+		}
+		while(choice==0);		
+		System.out.println("\t\t\n GOOD BYE\n");
+	}
+
+}

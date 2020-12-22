@@ -1,0 +1,97 @@
+public class student {
+	protected  int sid[]=new int[10];
+	protected String sName[]=new String[10];
+	protected String degreeName[]=new String[10];
+	protected int semester[]=new int[10];
+	public int size;
+	void add()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("HOW MANY TIMES YOU WANTS TO ENTER STUDENT");
+		size=sc.nextInt();
+		for(int i=0;i<size;i++)
+		{
+			System.out.println("ENTER STUDENT ID:");
+			sid[i]=sc.nextInt();
+			sc.nextLine();
+			System.out.println("ENTER STUDENT NAME:");
+			sName[i]=sc.nextLine();
+			System.out.println("ENTER DEGREE NAME:");
+			degreeName[i]=sc.nextLine();
+			System.out.println("ENTER SEMESTER:");
+			semester[i]=sc.nextInt();
+		}
+	}
+	void displayStudent()
+	{
+		for(int i=0;i<size;i++)
+		{
+			if(sid[i]>0)
+			{
+			System.out.println("STUDENT ID"+sid[i]);
+			System.out.println("STUDENT NAME:"+sName[i]);
+			System.out.println("STUDENT DEGREE NAME:"+degreeName[i]);
+			System.out.println("STUDENT CURRENT SEMESTER"+semester[i]);
+		}
+			else
+			{
+				System.out.println("RECORD NOT FOUND SUCCESSFULLY!");
+			}
+		}
+	}
+	void searchStudent()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER STUDENT ID FOR SEARCH");
+		int ss=sc.nextInt();
+		for(int i=0;i<size;i++)
+		{
+			if(ss==sid[i])
+			{
+				System.out.println("STUDENT RECORD FOUND SUCCESSFULLY!");
+			}
+			else
+			{
+				System.out.println("STUDENT RECORD NOT FOUND SUCCESSFULLy!");
+			}
+		}
+	}
+void updateStudent()
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("ENTER STUDENT ID WANTS TO UPDATE");
+	int us=sc.nextInt();
+	for(int i=0;i<size;i++)
+	{
+		if(us==sid[i])
+		{
+			System.out.println("ENTER STUDENT ID:");
+			sid[i]=sc.nextInt();
+			sc.nextLine();
+			System.out.println("ENTER STUDENT NAME:");
+			sName[i]=sc.nextLine();
+			System.out.println("ENTER DEGREE NAME:");
+			degreeName[i]=sc.nextLine();
+			System.out.println("ENTER SEMESTER:");
+			semester[i]=sc.nextInt();
+		}
+		else 
+		{
+			System.out.println("RECORD NOT FOUND!");
+		}
+	}
+}
+void deleteStudent()
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("ENTER STUDENT ID WANTS TO UPDATE");
+	int ds=sc.nextInt();
+	for(int i=0;i<size;i++)
+	{
+		if(ds==sid[i])
+		{
+			sid[i]=-1;
+		}
+	}
+}
+}
